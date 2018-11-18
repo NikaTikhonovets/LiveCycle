@@ -55,7 +55,7 @@ export class NameFiledComponent implements OnInit, OnDestroy, OnChanges, DoCheck
   ngDoCheck() {
     for (const item of [0, 1, 2]) {
       if (this.skills[item] < 0) {
-        console.log(`DoCheck: ${item}`);
+        console.log(`DoCheck: number < 0`);
         this.skills[item] = 0;
       }
     }
@@ -63,10 +63,6 @@ export class NameFiledComponent implements OnInit, OnDestroy, OnChanges, DoCheck
       console.log(`DoCheck: Person name changed to ${this.name} from ${this.oldName}`);
     }
   }
-  ngOnDestroy() {
-    console.log('OnDestroy: Deleted component');
-  }
-
   ngAfterContentInit(): void {
     console.log('AfterContentInit');
   }
@@ -77,6 +73,14 @@ export class NameFiledComponent implements OnInit, OnDestroy, OnChanges, DoCheck
     console.log('AfterViewInit');
   }
   ngAfterViewChecked(): void {
+    if (this.oldName === this.name) {
+      console.log('AfterViewChecked: Current name = Previous name');
+    }
     console.log('AfterViewChecked');
   }
+  ngOnDestroy() {
+    console.log('OnDestroy: Deleted component');
+  }
+
+
 }
