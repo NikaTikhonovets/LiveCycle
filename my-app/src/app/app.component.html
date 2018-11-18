@@ -1,0 +1,10 @@
+<div>
+
+  <form (ngSubmit)="titlePage.reset()" #titlePage="ngForm">
+    <label>
+      <input type="text" name="title" [(ngModel)]="name">
+    </label>
+    <button type="submit">Update</button>
+  </form>
+  <app-name-filed [name]="name"></app-name-filed>
+</div>
