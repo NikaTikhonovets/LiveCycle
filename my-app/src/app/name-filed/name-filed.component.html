@@ -1,9 +1,9 @@
 <div class="input-name">
-  <div *ngFor="let item of [0, 1, 2]">
+  <div *ngFor="let item of skills; let i = index">
     <span>Name: {{name}}</span>
-    <span>Skill: {{skills[item]}}</span>
-    <button (click)="increase(item);">Up</button>
-    <button (click)="decrease(item);">Down</button>
+    <span>Skill: {{skills[i]}}</span>
+    <button (click)="increase(i);">Up</button>
+    <button (click)="decrease(i);">Down</button>
   </div>
   <div>
     <button (click)="sum();">Total</button>

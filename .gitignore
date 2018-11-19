@@ -1,0 +1,40 @@
+[Oo]bj 
+[Bb]in 
+.vs/ 
+packages/ 
+*.user 
+*.suo 
+*.[Cc]ache 
+*.bak 
+*.ncb 
+*.log 
+
+target/ 
+.classpath 
+.project 
+.settings
+
+# Модули node
+node_modules/
+
+# Покрытие тестов
+coverage/
+.nyc_output/
+
+# Запуск программы
+bin/
+
+# Пользовательские файлы
+log.txt
+database.sql
+
+app/
+config.js
+config.js.map
+FileCheck.js
+FileCheck.js.map
+MainFile.js
+MainFile.js.map
+
+*.DS_Store 
+[Tt]humbs.db
